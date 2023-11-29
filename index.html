@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo" style="cursor: default;">Art Gallery</div>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav-links">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Exhibitions</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#" class="no-arrow">About Us</a></li>
+            <li><a href="#" class="no-arrow">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="search-icon"><i class="fas fa-search"></i></div>
+            <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            <!-- Add the cart menu -->
+        <div class="cart-menu">
+            <span class="cart-close" style="position: absolute; top: 20px; right: 20px; cursor: pointer; font-size: 32px; margin-left: 460px;">&times;</span>
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+            </div>
+            <div class="cart-items">
+                <div id=""></div>
+                <!-- Add cart items here -->
+                <div class="cart-item">
+                    <img src="art6.jpg" alt="Product Image">
+                    <!-- Inside the cart-item-details div -->
+                    <div class="cart-item-details">
+                        <p class="cart-item-name">Sunset on the Beach</p>
+                        <p class="cart-item-price">$140.15</p>
+                        <div class="cart-item-actions">
+                            <button class="remove-item">Remove</button>
+                            <!-- Add input for quantity -->
+                            <input type="number" class="item-quantity" value="1" min="1" max="50" style="width: 50px;" onkeydown="return false">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="art5.jpg" alt="Product Image">
+                    <div class="cart-item-details">
+                        <p class="cart-item-name">Mojito Print by Maridad Studio</p>
+                        <p class="cart-item-price">$150.90</p>
+                        <div class="cart-item-actions">
+                            <button class="remove-item">Remove</button>
+                            <!-- Add input for quantity -->
+                            <input type="number" class="item-quantity" value="1" min="1" max="50" style="width: 50px;" onkeydown="return false">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="art4.jpg" alt="Product Image">
+                    <div class="cart-item-details">
+                        <p class="cart-item-name">Lush Forest in the Sunlight ~ Acrylic painting</p>
+                        <p class="cart-item-price">$340.00</p>
+                        <div class="cart-item-actions">
+                            <button class="remove-item">Remove</button>
+                            <!-- Add input for quantity -->
+                            <input type="number" class="item-quantity" value="1" min="1" max="50" style="width: 50px;" onkeydown="return false">
+                        </div>
+                    </div>
+                </div>            
+                
+                <div class="empty-cart-message">
+                    <div class="cart-image">
+                       <img src="empty-cart.jpg" alt="Empty Cart" style="width: 150px; height: 100px;"> 
+                    </div>
+                    Your cart is empty!
+                    <br>
+                    Add your favourite artworks to your cart
+                    <button class="shop-btn">Shop Now</button>
+                </div> 
+            </div>
+            <!-- Move the tax-info element above the checkout-btn -->
+            <div class="cart-total-container">
+                <div class="cart-total">
+                    <p>Estimated Total <span id="cart-total">$0.00</span></p>
+                    <p class="tax-info">*Please note that taxes and shipping costs will be determined during the checkout process.</p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>                    
+                <p class="discount-info">Promotions and discounts applied at checkout.</p>
+            </div>
+        </div>
+
+            <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+            <div class="user-dropdown" id="userDropdown">
+                <a href="#">Account <i class="fas fa-external-link-alt"></i></a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#" class="logout-item">Logout <i class="fas fa-sign-out-alt"></i></a>
+            </div>            
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="wrapped.jpg" alt="" class="active" data-text="Unveiling 2023's Art Essence:  #ArtWrapped">
+        <img src="le louvre.jpg" alt="" data-text="Meet the Louvre ~ located in Paris, France">
+        <img src="museums1.jpg" alt="" data-text="African Art | Baltimore Museum of Art">
+        <img src="black artists.jpg" alt="" data-text="Black Month: Empowering Black Artists">
+        <img src="exhibitions.jpg" alt="" data-text="Discover Exciting Exhibitions">
+        <img src="picasso1.jpg" alt="" data-text="Pablo Picasso: Art's Revolutionary Vision">
+        <img src="competitions.jpg" alt="" data-text="Unleash Your Creativity">
+    
+        <div class="container">
+            <div class="hero-content">
+                <h1>Unveiling 2023's Art Essence: <i style="font-size: 32px;">#ArtWrapped</i></h1>
+                <a href="#" class="btn" style="margin-left: 0px;">Learn More</a>
+            </div>
+            <div class="dots-container">        
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <!-- Add more dots as needed -->              
+            </div>                
+        </div>
+    </section>
+
+    <section class="today" style="background-color: #F3CFC6; margin-top: 50px;">
+        <h2>Word of the Day: <b style="text-shadow: #000 1px 0 10px;"><i>Impressionism <sup>n</sup></i></b></h2>        
+        <h3 style="text-align: center; margin-left: 120px; margin-top: 10px;">[/ɪmˈprɛʃənɪz(ə)m/]</h3>
+        <div class="image-container">
+          <!-- Image 1 -->
+          <div>
+            <img src="art10.jpg" alt="Impressionism Image 1" style="width: 450px; height: 252px; margin-left: 370px; margin-top: 40px;">
+            <div class="category" style="margin-top: -30px; margin-left: -210px;">Artists</div>
+            <div class="image-text" style="margin-top: -10px; margin-left: -80px;">Van Gogh's the Bedroom Notebook</div>
+          </div>
+          <!-- Image 2 -->
+          <div>
+            <img src="art9.jpg" alt="Impressionism Image 2" style="width: 220%; margin-left: 620px; margin-top: 40px; height: 252px;">
+            <div class="category" style="margin-top: -30px; margin-left: 280px;">Landscape Arts</div>
+            <div class="image-text" style="margin-left: 330px; margin-top: -10px;">Farmhouse in Provence</div>
+          </div>
+          <!-- Image 3 -->
+          <div>
+            <img src="art8.jpg" alt="Impressionism Image 3" style="margin-top: 40px; margin-left: -400px; height: 524px; width: 330px;">
+            <div class="category" style="margin-top: 236px; margin-left: -540px;">Portraiture</div>
+            <div class="image-text" style="margin-top: 260px; margin-left: -460px;">Woman Seated on a Bench</div>
+          </div>
+          <!-- Image 0 -->
+          <div>
+            <img src="art11.jpg" alt="Houses of Parliament" style="width: 356px; height: 252px; margin-left: -265px; margin-top: 310px;">
+            <div class="category" style="margin-top: 236px; margin-left: -190px;">Architecture</div>
+            <div class="image-text" style="margin-left: -140px; margin-top: 260px;">Houses of Parliament</div>
+          </div>
+          <!-- Image 4 -->
+          <div>
+            <img src="art7.jpg" alt="Bal du moulin de la Galette" style="margin-left: -110px; margin-top: 310px; height: 252px; width: 450px;">
+            <div class="category" style="margin-top: 236px; margin-left: 180px;">Figurative Art</div>
+            <div class="image-text" style="margin-left: 250px; margin-top: 260px;">Bal du moulin de la Galette</div>
+          </div>
+        </div> 
+      </section>
+    
+    <!-- Help Button -->
+    <div id="help-button-container">
+        <button id="help-button" aria-label="Help">
+          <i class="fas fa-question"></i> 
+          <span class="tooltip-text">Help</span> 
+        </button>
+      </div>
+    
+    <!-- Help Form Container -->
+    <div id="help-form-container">
+      <form id="help-form">
+        <h2>Contact Us</h2>
+        
+        <!-- Group related fields within a fieldset -->
+        <fieldset>
+          <legend>Your Information</legend>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+          </div>
+        </fieldset>
+    
+        <fieldset>
+          <legend>Your Message</legend>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="How can we assist you?" required></textarea>
+          </div>
+        </fieldset>
+    
+        <!-- Display validation errors here -->
+        <div id="validation-errors" class="error-messages"></div>
+    
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Add the search menu -->
+    <div class="search-menu">
+        <span class="search-close">&times;</span>
+        <div class="search-bar">
+            <h3>Search</h3>
+            <input type="text" placeholder="What are you looking for?" style="width: 450px; height: 40px; border-radius: 5px; margin-top: 20px; padding-left: 10px;">
+            <div class="search-icon"><i class="fas fa-search"></i></div> 
+        </div>
+        <div class="suggested-searches">
+            <h3>Suggested Searches</h3>
+            <ul>
+                <li><a href="#">Abstract Paintings</a></li>
+                <li><a href="#">Sculpture Techniques</a></li>
+                <li><a href="#">Impressionist Art</a></li>
+                <li><a href="#">Famous Art Museums</a></li>
+                <li><a href="#">Art Restoration</a></li>
+                <li><a href="#">Art History Books</a></li>
+            </ul>
+        </div>
+        <div class="featured-products">
+            <h3 style="margin-top: 20px;">Featured Products</h3>
+            <ul class="featured-products-list"> 
+                <li><a href="#">Oil Paint Set</a></li>
+                <li><a href="#">Canvas Prints</a></li>
+                <li><a href="#">Sculpting Tools Kit</a></li>
+                <li><a href="#">Watercolor Paints</a></li>
+                <li><a href="#">Art Easels</a></li>
+                <li><a href="#">Art History Books</a></li>
+                <li><a href="#">Famous Artists</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="plan-your-visit" > 
+        <h2 class="plan-your-visit">Plan Your Visit</h2>
+        <div class="main-container">
+          <div class="sub-container">
+            <h2 class="container-heading">Opening Hours</h2>
+            <div class="container-content">
+              <p>Explore our art gallery at your convenience with our extended opening hours, accommodating art enthusiasts of all schedules.</p>
+            </div>
+          </div>
+          <div class="sub-container">
+            <h2 class="container-heading">Guided Tours</h2>
+            <div class="container-content">
+              <p>Deepen your understanding and appreciation of the artworks with our knowledgeable guides who bring the artwork to life.</p>
+            </div>
+          </div>
+          <div class="sub-container">
+            <h2 class="container-heading">Exhibition Calendar</h2>
+            <div class="container-content">
+              <p>Stay up-to-date with our ever-evolving exhibition calendar, ensuring that you never miss a captivating new display of art.</p>
+            </div>
+          </div>
+          <div class="sub-container">
+            <h2 class="container-heading">Accessibility</h2>
+            <div class="container-content">
+              <p>Our gallery ensures accessibility with ramps, elevators, and accommodations. Contact us in advance for specific needs. <b>Art is for everyone.</b></p>          
+            </div>
+          </div>
+        </div>
+      </section>
+
+<div style="height: 2000px; background: #f0f0ff;"></div>
+<footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Art Gallery</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Reviews</a></li> 
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Artist Series</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Communities</h3>
+        <ul>
+          <li><a href="#">For Creators</a></li>
+          <li><a href="#">For Buyers</a></li>
+          <li><a href="#">Advertisement</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Investors</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Top Categories</h3>
+        <ul>
+          <li><a href="#">Realism</a></li>
+          <li><a href="#">Contemporary Art</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Surrealism</a></li>
+          <li><a href="#">Impressionism</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>@ArtGallery</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="other-links">
+      <a href="#">Privacy Policy |</a>
+      <a href="#">Terms of Use |</a>
+      <a href="#">Sitemap |</a>      
+      <a href="#">Accessibility</a>
+      <p style="text-align: center; padding-top: 20px; font-size: 12px;">&copy; 2023 Art Gallery. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html> 
